@@ -1,0 +1,9 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.MODEL ALB D
++ IS=394.20E-18
++ N=3.6253
++ RS=12.352
+
+*$

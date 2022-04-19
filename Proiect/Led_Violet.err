@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (17.4.0.d001)
+STATUS:  
+STATUS: Translator started at Wednesday, May 19, 2021 19:19:29
+STATUS: C:\Cadence\SPB_17.4\tools\bin\sch2cap -f "F:\Facultate\An2\Semestrul 2\Tehnici CAD\Proiect\Led_Violet.lib" -o "F:\Facultate\An2\Semestrul 2\Tehnici CAD\Proiect\Led_Violet.olb" -i C:\Users\Mihai\AppData\Roaming\SPB_Data\.\cdssetup\OrCAD_PSpice/17.4.0/PSpice.ini
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\SPB_17.4\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1029): Using existing library 'F:\Facultate\An2\Semestrul 2\Tehnici CAD\Proiect\Led_Violet.olb'.
+STATUS: Translator stopped at Wednesday, May 19, 2021 19:19:30
+STATUS: 0 Error messages, 0 Warning messages

@@ -1,0 +1,179 @@
+(ExpressProject "Proiect"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 P001 (3823098) [10/7/2019]-[05/26/21]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (Allegro Netlist Directory "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\proiect.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\proiect-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\proiect-pspicefiles\schematic1\simulare_timp.sim"
+        (DisplayName "SCHEMATIC1-Simulare_timp")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\proiect-pspicefiles\schematic1\simulare_dc.sim"
+        (DisplayName "SCHEMATIC1-simulare_dc")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\proiect-pspicefiles\schematic1\simulare_dc.sim"))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\led_violet.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\led_violet.lib"))
+      (File ".\led_verde.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\led_verde.lib"))
+      (File ".\led_rosu.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\led_rosu.lib"))
+      (File ".\led_galben.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\led_galben.lib"))
+      (File ".\led_albastru.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\led_albastru.lib"))
+      (File ".\led_alb.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\led_alb.lib"))))
+  (Folder "Logs")
+  (PartMRUSelector
+    (0
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (UA772
+      (FullPartName "UA772.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\OPAMP.OLB")
+      (DeviceIndex "1"))
+    (LM741
+      (FullPartName "LM741.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\OPAMP.OLB")
+      (DeviceIndex "0"))
+    (VIOLET
+      (FullPartName "VIOLET.Normal")
+      (LibraryName
+         "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\PROIECT\LED_VIOLET.OLB")
+      (DeviceIndex "0"))
+    (VERDE
+      (FullPartName "VERDE.Normal")
+      (LibraryName
+         "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\PROIECT\LED_VERDE.OLB")
+      (DeviceIndex "0"))
+    (ROSU
+      (FullPartName "ROSU.Normal")
+      (LibraryName
+         "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\PROIECT\LED_ROSU.OLB")
+      (DeviceIndex "0"))
+    (GALBEN
+      (FullPartName "GALBEN.Normal")
+      (LibraryName
+         "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\PROIECT\LED_GALBEN.OLB")
+      (DeviceIndex "0"))
+    (ALBASTRU
+      (FullPartName "ALBASTRU.Normal")
+      (LibraryName
+         "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\PROIECT\LED_ALBASTRU.OLB")
+      (DeviceIndex "0"))
+    (ALB
+      (FullPartName "ALB.Normal")
+      (LibraryName
+         "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\PROIECT\LED_ALB.OLB")
+      (DeviceIndex "0"))
+    (Dbreak
+      (FullPartName "Dbreak.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (LM324
+      (FullPartName "LM324.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\OPAMP.OLB")
+      (DeviceIndex "1"))
+    (DIODE
+      (FullPartName "DIODE.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (LedRosu
+      (FullPartName "LedRosu.Normal")
+      (LibraryName
+         "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\MODELE\ROSU\LEDROSU-PSPICEFILES\SCHEMATIC1\ROSU.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (POT
+      (FullPartName "POT.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "Mihai")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect.dsn")
+      (Path "Design Resources"
+         "f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Model Libraries")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 76 0 578"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1414 24 596")
+        (Scroll "-203 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "F:\FACULTATE\AN2\SEMESTRUL 2\TEHNICI CAD\PROIECT\PROIECT.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (LastUsedLibraryBrowseDirectory
+     "F:\Facultate\An2\Semestrul 2\Tehnici CAD\Proiect"))

@@ -1,0 +1,9 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.MODEL VIOLET D
++ IS=27.627E-12
++ N=4.9950
++ RS=16.165
+
+*$

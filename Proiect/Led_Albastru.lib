@@ -1,0 +1,9 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.MODEL ALBASTRU D
++ IS=168.20E-15
++ N=4.4901
++ RS=11.666
+
+*$

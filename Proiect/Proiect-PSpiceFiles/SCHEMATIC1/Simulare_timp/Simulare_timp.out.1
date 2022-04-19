@@ -1,0 +1,643 @@
+
+**** 05/26/21 09:33:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Simulare_timp"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-pspicefiles\schematic1\simulare_t
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Simulare_timp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../led_violet.lib" 
+.LIB "../../../led_verde.lib" 
+.LIB "../../../led_rosu.lib" 
+.LIB "../../../led_galben.lib" 
+.LIB "../../../led_albastru.lib" 
+.LIB "../../../led_alb.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Mihai\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 0.1m 
+.STEP PARAM R LIST 1 1.5k 3.5k 6.5k 11.5k 21.5k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT
+V_V1         N00884 0 12V
+R_R2         0 N33107  15k TC=0,0 
+V_V2         N01960 0 20V
+R_R3         N33107 N01967  22k TC=0,0 
+R_R4         N01960 N01971  22k TC=0,0 
+R_R5         0 N01971  10k TC=0,0 
+R_R6         N01967 N02054  10k TC=0,0 
+R_R7         N02279 0  10k TC=0,0 
+R_R8         N02363 N02279  6.5k TC=0,0 
+V_V3         +VCC 0 12V
+V_V4         -VCC 0 -12V
+R_R9         N33107 N00884  {R} TC=0,0 
+V_V6         N44111 0 5.99V
+V_V7         N18597 0 6.99V
+V_V8         N18770 0 7.99V
+V_V9         N18946 0 8.99V
+V_V10         N19125 0 9.99V
+V_V11         N20229 0 10.99V
+R_R10         N21390 N21545  430 TC=0,0 
+R_R11         N21394 N21549  430 TC=0,0 
+R_R12         N21398 N21553  485 TC=0,0 
+R_R13         N21402 N21557  490 TC=0,0 
+R_R14         N21406 N21561  475 TC=0,0 
+R_R15         N21414 N21565  445 TC=0,0 
+D_D1         N21545 0 ALB 
+D_D2         N21549 0 ALBASTRU 
+D_D3         N21553 0 GALBEN 
+D_D4         N21557 0 ROSU 
+D_D5         N21561 0 VERDE 
+D_D6         N21565 0 VIOLET 
+X_U11         N02363 N44111 +VCC 0 N21390 LM741
+X_U12         N02363 N18597 +VCC 0 N21394 LM741
+X_U13         N02363 N18770 +VCC 0 N21398 LM741
+X_U14         N02363 N18946 +VCC 0 N21402 LM741
+X_U15         N02363 N19125 +VCC 0 N21406 LM741
+X_U16         N02363 N20229 +VCC 0 N21414 LM741
+X_U17A         N02279 N02054 -VCC +VCC N02363 UA772
+X_U17B         N01967 N01971 +VCC -VCC N02054 UA772
+.PARAM  r=50k
+
+**** RESUMING Simulare_timp.cir ****
+.END
+
+**** 05/26/21 09:33:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Simulare_timp"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-pspicefiles\schematic1\simulare_t
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               VIOLET          VERDE           ROSU            GALBEN          
+          IS   27.627000E-12  543.420000E-12  546.370000E-15  229.480000E-18 
+           N    4.995           4.8013          2.6607          2.0169       
+          RS   16.165           7.6318         16.514          21.7          
+
+
+               ALBASTRU        ALB             X_U17A.dx       X_U17A.dy       
+          IS  168.200000E-15  394.200000E-18  800.000000E-18  800.000000E-18 
+           N    4.4901          3.6253                                       
+          RS   11.666          12.352                           1.000000E-03 
+         CJO                                                   10.000000E-12 
+
+
+               X_U17B.dx       X_U17B.dy       
+          IS  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+               X_U11.x_lm741.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U11.x_lm741.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U12.x_lm741.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U12.x_lm741.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U13.x_lm741.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U13.x_lm741.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U14.x_lm741.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U14.x_lm741.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U15.x_lm741.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U15.x_lm741.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+               X_U16.x_lm741.dx 
+          IS  800.000000E-18 
+          RS    1            
+
+
+               X_U16.x_lm741.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 05/26/21 09:33:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Simulare_timp"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-pspicefiles\schematic1\simulare_t
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U11.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+               X_U12.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+               X_U13.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+               X_U14.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+               X_U15.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+               X_U16.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 05/26/21 09:33:38 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Simulare_timp"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-pspicefiles\schematic1\simulare_t
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U17A.jx       X_U17B.jx       
+               PJF             PJF             
+         VTO   -1              -1            
+        BETA  205.000000E-06  205.000000E-06 
+          IS   25.000000E-12   25.000000E-12 
+
+
+Starting pseudo-transient algorithm.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( +VCC)     .7473  ( -VCC)    -.7473  (N00884)     .7473 (N01960)    1.2455     
+
+(N01967)    -.6006 (N01971)     .3892 (N02054)   -1.2133 (N02279)    -.0082     
+
+(N02363)    -.0135 (N18597)     .4353 (N18770)     .4976 (N18946)     .5599     
+
+(N19125)     .6221 (N20229)     .6844 (N21390)    -.0891 (N21394)    -.0897     
+
+(N21398)    -.0903 (N21402)    -.0908 (N21406)    -.0914 (N21414)    -.0919     
+
+(N21545)    -.0891 (N21549)    -.0897 (N21553)    -.0903 (N21557)    -.0908     
+
+(N21561)    -.0914 (N21565)    -.0919 (N33107)     .7472 (N44111)     .3730     
+
+(X_U17A.6)     .5172                  (X_U17A.7)   -2.5838                      
+
+(X_U17A.8)   -2.5838                  (X_U17A.9)    0.0000                      
+
+(X_U17B.6) 921.7E-06                  (X_U17B.7)   -1.2448                      
+
+(X_U17B.8)   -1.2448                  (X_U17B.9)    0.0000                      
+
+(X_U17A.10)    -.8107                 (X_U17A.11)    -.8005                     
+
+(X_U17A.12)    -.1835                 (X_U17A.53)    -.8096                     
+
+(X_U17A.54)     .8096                 (X_U17A.90)   -2.1343                     
+
+(X_U17A.91)    1.5569                 (X_U17A.92)   -1.5569                     
+
+(X_U17A.99)    0.0000                 (X_U17B.10)    -.6848                     
+
+(X_U17B.11)    -.7473                 (X_U17B.12)    -.7020                     
+
+(X_U17B.53)     .6850                 (X_U17B.54)    -.6850                     
+
+(X_U17B.90)    -.0261                 (X_U17B.91)    1.5569                     
+
+(X_U17B.92)   -1.5569                 (X_U17B.99)    0.0000                     
+
+(X_U11.x_lm741.6) 170.8E-06           (X_U11.x_lm741.7)    -.0891               
+
+(X_U11.x_lm741.8)    -.0891           (X_U11.x_lm741.9)    0.0000               
+
+(X_U12.x_lm741.6) 171.7E-06           (X_U12.x_lm741.7)    -.0897               
+
+(X_U12.x_lm741.8)    -.0897           (X_U12.x_lm741.9)    0.0000               
+
+(X_U13.x_lm741.6) 172.6E-06           (X_U13.x_lm741.7)    -.0903               
+
+(X_U13.x_lm741.8)    -.0903           (X_U13.x_lm741.9)    0.0000               
+
+(X_U14.x_lm741.6) 173.4E-06           (X_U14.x_lm741.7)    -.0908               
+
+(X_U14.x_lm741.8)    -.0908           (X_U14.x_lm741.9)    0.0000               
+
+(X_U15.x_lm741.6) 174.2E-06           (X_U15.x_lm741.7)    -.0914               
+
+(X_U15.x_lm741.8)    -.0914           (X_U15.x_lm741.9)    0.0000               
+
+(X_U16.x_lm741.6) 175.0E-06           (X_U16.x_lm741.7)    -.0919               
+
+(X_U16.x_lm741.8)    -.0919           (X_U16.x_lm741.9)    0.0000               
+
+(X_U11.x_lm741.10)    -.1683          (X_U11.x_lm741.11)     .7424              
+
+(X_U11.x_lm741.12)     .7473          (X_U11.x_lm741.13)    -.1666              
+
+(X_U11.x_lm741.14)    -.1683          (X_U11.x_lm741.53)     .6850              
+
+(X_U11.x_lm741.54)     .0623          (X_U11.x_lm741.90)-4.563E-06              
+
+(X_U11.x_lm741.91)    2.4911          (X_U11.x_lm741.92)   -2.4911              
+
+(X_U11.x_lm741.99)     .0233          (X_U12.x_lm741.10)    -.1061              
+
+(X_U12.x_lm741.11)     .7424          (X_U12.x_lm741.12)     .7473              
+
+(X_U12.x_lm741.13)    -.1044          (X_U12.x_lm741.14)    -.1061              
+
+(X_U12.x_lm741.53)     .6850          (X_U12.x_lm741.54)     .0623              
+
+(X_U12.x_lm741.90)-4.574E-06          (X_U12.x_lm741.91)    2.4911              
+
+(X_U12.x_lm741.92)   -2.4911          (X_U12.x_lm741.99)     .0233              
+
+(X_U13.x_lm741.10)    -.0440          (X_U13.x_lm741.11)     .7424              
+
+(X_U13.x_lm741.12)     .7473          (X_U13.x_lm741.13)    -.0423              
+
+(X_U13.x_lm741.14)    -.0440          (X_U13.x_lm741.53)     .6850              
+
+(X_U13.x_lm741.54)     .0623          (X_U13.x_lm741.90)-4.586E-06              
+
+(X_U13.x_lm741.91)    2.4911          (X_U13.x_lm741.92)   -2.4911              
+
+(X_U13.x_lm741.99)     .0233          (X_U14.x_lm741.10)     .0181              
+
+(X_U14.x_lm741.11)     .7424          (X_U14.x_lm741.12)     .7473              
+
+(X_U14.x_lm741.13)     .0199          (X_U14.x_lm741.14)     .0181              
+
+(X_U14.x_lm741.53)     .6850          (X_U14.x_lm741.54)     .0623              
+
+(X_U14.x_lm741.90)-4.598E-06          (X_U14.x_lm741.91)    2.4911              
+
+(X_U14.x_lm741.92)   -2.4911          (X_U14.x_lm741.99)     .0233              
+
+(X_U15.x_lm741.10)     .0803          (X_U15.x_lm741.11)     .7423              
+
+(X_U15.x_lm741.12)     .7473          (X_U15.x_lm741.13)     .0820              
+
+(X_U15.x_lm741.14)     .0803          (X_U15.x_lm741.53)     .6850              
+
+(X_U15.x_lm741.54)     .0623          (X_U15.x_lm741.90)-4.627E-06              
+
+(X_U15.x_lm741.91)    2.4911          (X_U15.x_lm741.92)   -2.4911              
+
+(X_U15.x_lm741.99)     .0233          (X_U16.x_lm741.10)     .1424              
+
+(X_U16.x_lm741.11)     .7423          (X_U16.x_lm741.12)     .7473              
+
+(X_U16.x_lm741.13)     .1442          (X_U16.x_lm741.14)     .1424              
+
+(X_U16.x_lm741.53)     .6850          (X_U16.x_lm741.54)     .0623              
+
+(X_U16.x_lm741.90)-4.622E-06          (X_U16.x_lm741.91)    2.4911              
+
+(X_U16.x_lm741.92)   -2.4911          (X_U16.x_lm741.99)     .0233          
+
+
+  These voltages failed to converge:
+
+    V(N01967)                 =  -593.59mV  \  -600.64mV
+    V(N02054)                 =    -1.203V  \    -1.213V
+    V(N02279)                 =    -20.28V  \   -8.192mV
+    V(N02363)                 =    -33.47V  \   -13.52mV
+    V(N21390)                 =   -88.62mV  \   -89.15mV
+    V(N21545)                 =   -88.62mV  \   -89.15mV
+    V(N21394)                 =   -89.21mV  \   -89.74mV
+    V(N21549)                 =   -89.21mV  \   -89.74mV
+    V(N21398)                 =   -89.77mV  \   -90.29mV
+    V(N21553)                 =   -89.77mV  \   -90.29mV
+    V(N21402)                 =   -90.31mV  \   -90.83mV
+    V(N21557)                 =   -90.31mV  \   -90.83mV
+    V(N21406)                 =   -90.83mV  \   -91.36mV
+    V(N21561)                 =   -90.83mV  \   -91.36mV
+    V(N21414)                 =   -91.35mV  \   -91.88mV
+    V(N21565)                 =   -91.35mV  \   -91.88mV
+    V(X_U17A.11)              =    -1.290V  \  -800.54mV
+    V(X_U17A.12)              =  -673.17mV  \  -183.52mV
+    V(X_U17A.6)               =    -30.52V  \   517.20mV
+    V(X_U17A.7)               =    -33.62V  \    -2.584V
+    V(X_U17A.90)              =  -126.32mV  \    -2.134V
+    V(X_U17A.10)              =   -34.65mV  \  -810.72mV
+    V(X_U17A.8)               =    -33.62V  \    -2.584V
+    V(X_U17B.6)               =   924.89uV  \   921.66uV
+    V(X_U17B.90)              =   -34.64mV  \   -26.14mV
+    V(X_U11.x_lm741.6)        =   699.63uV  \   170.85uV
+    V(X_U11.x_lm741.7)        =   -88.62mV  \   -89.15mV
+    V(X_U11.x_lm741.90)       =   -81.10pV  \   -4.563uV
+    V(X_U11.x_lm741.99)       =   373.66mV  \    23.27mV
+    V(X_U11.x_lm741.10)       =  -167.50mV  \  -168.27mV
+    V(X_U11.x_lm741.13)       =  -165.84mV  \  -166.56mV
+    V(X_U11.x_lm741.14)       =  -167.50mV  \  -168.27mV
+    V(X_U11.x_lm741.8)        =   -88.62mV  \   -89.15mV
+    V(X_U12.x_lm741.6)        =   700.53uV  \   171.75uV
+    V(X_U12.x_lm741.7)        =   -89.21mV  \   -89.74mV
+    V(X_U12.x_lm741.90)       =   -86.54pV  \   -4.574uV
+    V(X_U12.x_lm741.99)       =   373.66mV  \    23.27mV
+    V(X_U12.x_lm741.10)       =  -105.35mV  \  -106.13mV
+    V(X_U12.x_lm741.13)       =  -103.68mV  \  -104.42mV
+    V(X_U12.x_lm741.14)       =  -105.35mV  \  -106.13mV
+    V(X_U12.x_lm741.8)        =   -89.21mV  \   -89.74mV
+    V(X_U13.x_lm741.6)        =   701.37uV  \   172.59uV
+    V(X_U13.x_lm741.7)        =   -89.77mV  \   -90.30mV
+    V(X_U13.x_lm741.90)       =   -81.91pV  \   -4.586uV
+    V(X_U13.x_lm741.99)       =   373.66mV  \    23.27mV
+    V(X_U13.x_lm741.10)       =   -43.22mV  \   -44.00mV
+    V(X_U13.x_lm741.13)       =   -41.54mV  \   -42.27mV
+    V(X_U13.x_lm741.14)       =   -43.22mV  \   -44.00mV
+    V(X_U13.x_lm741.8)        =   -89.77mV  \   -90.30mV
+    V(X_U14.x_lm741.6)        =   702.18uV  \   173.40uV
+    V(X_U14.x_lm741.7)        =   -90.31mV  \   -90.83mV
+    V(X_U14.x_lm741.90)       =  -106.77pV  \   -4.598uV
+    V(X_U14.x_lm741.99)       =   373.66mV  \    23.27mV
+    V(X_U14.x_lm741.10)       =    18.92mV  \    18.14mV
+    V(X_U14.x_lm741.13)       =    20.60mV  \    19.88mV
+    V(X_U14.x_lm741.14)       =    18.92mV  \    18.14mV
+    V(X_U14.x_lm741.8)        =   -90.31mV  \   -90.83mV
+    V(X_U15.x_lm741.6)        =   702.98uV  \   174.20uV
+    V(X_U15.x_lm741.7)        =   -90.83mV  \   -91.36mV
+    V(X_U15.x_lm741.90)       =   -17.64nV  \   -4.627uV
+    V(X_U15.x_lm741.99)       =   373.66mV  \    23.27mV
+    V(X_U15.x_lm741.10)       =    81.05mV  \    80.28mV
+    V(X_U15.x_lm741.13)       =    82.75mV  \    82.02mV
+    V(X_U15.x_lm741.14)       =    81.05mV  \    80.28mV
+    V(X_U15.x_lm741.8)        =   -90.83mV  \   -91.36mV
+    V(X_U16.x_lm741.6)        =   703.77uV  \   174.99uV
+    V(X_U16.x_lm741.7)        =   -91.35mV  \   -91.88mV
+    V(X_U16.x_lm741.90)       =  -955.53pV  \   -4.622uV
+    V(X_U16.x_lm741.99)       =   373.66mV  \    23.27mV
+    V(X_U16.x_lm741.10)       =   143.19mV  \   142.42mV
+    V(X_U16.x_lm741.13)       =   144.89mV  \   144.17mV
+    V(X_U16.x_lm741.14)       =   143.19mV  \   142.42mV
+    V(X_U16.x_lm741.8)        =   -91.35mV  \   -91.88mV
+
+  These supply currents failed to converge:
+
+    I(X_U17A.egnd)            =    2.339mA  \    34.27mA
+    I(X_U17B.egnd)            =   556.28uA  \   419.77uA
+    I(X_U11.x_lm741.egnd)     =    9.048nA  \   114.20nA
+    I(X_U12.x_lm741.egnd)     =    14.07nA  \   119.41nA
+    I(X_U13.x_lm741.egnd)     =    19.13nA  \   124.61nA
+    I(X_U14.x_lm741.egnd)     =    24.09nA  \   129.81nA
+    I(X_U15.x_lm741.egnd)     =    29.45nA  \   135.30nA
+    I(X_U16.x_lm741.egnd)     =    34.13nA  \   140.23nA
+    I(V_V1)                   =  -110.76uA  \  -111.08uA
+    I(V_V3)                   =   -298.93A  \   -10.00GA
+    I(V_V4)                   =    298.93A  \    10.00GA
+    I(V_V6)                   =    -9.54nA  \    -9.81nA
+    I(V_V7)                   =    -9.58nA  \    -9.86nA
+    I(V_V8)                   =    -9.63nA  \    -9.91nA
+    I(V_V9)                   =    -9.68nA  \    -9.96nA
+    I(V_V10)                  =    -9.73nA  \   -10.01nA
+    I(V_V11)                  =    -9.78nA  \   -10.06nA
+    I(X_U17A.vb)              =  -305.20uA  \    5.172uA
+    I(X_U17A.vc)              =    63.81pA  \   -18.61mA
+    I(X_U17A.ve)              =   -67.91pA  \   -52.88mA
+    I(X_U17A.vlim)            =   -2.028mA  \   -34.27mA
+    I(X_U17A.vlp)             =   -1.684pA  \   -3.692pA
+    I(X_U17A.vln)             =  -303.61uA  \    3.962uA
+    I(X_U17B.vb)              =    9.249nA  \    9.217nA
+    I(X_U17B.vc)              =    1.889pA  \   325.89nA
+    I(X_U17B.ve)              =  -358.24nA  \   -1.263uA
+    I(X_U17B.vlim)            =  -556.22uA  \  -419.72uA
+    I(X_U11.x_lm741.vb)       =    6.996nA  \    1.709nA
+    I(X_U11.x_lm741.vc)       =   774.46fA  \    48.61nA
+    I(X_U11.x_lm741.ve)       =  -425.64fA  \   -24.65nA
+    I(X_U11.x_lm741.vlim)     =   -1.302pA  \   -73.26nA
+    I(X_U12.x_lm741.vb)       =    7.005nA  \    1.718nA
+    I(X_U12.x_lm741.vc)       =   775.05fA  \    48.67nA
+    I(X_U12.x_lm741.ve)       =  -431.15fA  \   -24.77nA
+    I(X_U12.x_lm741.vlim)     =   -1.390pA  \   -73.45nA
+    I(X_U13.x_lm741.vb)       =    7.014nA  \    1.726nA
+    I(X_U13.x_lm741.vc)       =   775.61fA  \    48.75nA
+    I(X_U13.x_lm741.ve)       =  -437.00fA  \   -24.89nA
+    I(X_U13.x_lm741.vlim)     =   -1.315pA  \   -73.64nA
+    I(X_U14.x_lm741.vb)       =    7.022nA  \    1.734nA
+    I(X_U14.x_lm741.vc)       =   776.15fA  \    48.82nA
+    I(X_U14.x_lm741.ve)       =  -442.97fA  \   -25.01nA
+    I(X_U14.x_lm741.vlim)     =   -1.715pA  \   -73.82nA
+    I(X_U15.x_lm741.vb)       =    7.030nA  \    1.742nA
+    I(X_U15.x_lm741.vc)       =   776.67fA  \    48.89nA
+    I(X_U15.x_lm741.ve)       =  -448.93fA  \   -25.12nA
+    I(X_U15.x_lm741.vlim)     =  -283.24pA  \   -74.30nA
+    I(X_U16.x_lm741.vb)       =    7.038nA  \    1.750nA
+    I(X_U16.x_lm741.vc)       =   777.19fA  \    48.96nA
+    I(X_U16.x_lm741.ve)       =  -454.80fA  \   -25.25nA
+    I(X_U16.x_lm741.vlim)     =   -15.34pA  \   -74.21nA
+    I(X_U17A.hlim)            =  -303.61uA  \    3.962uA
+
+  These devices failed to converge:
+    X_U17A.dc X_U17A.de X_U17A.dln X_U17A.dp X_U17B.de X_U17A.fb X_U17B.fb 
+    X_U11.x_lm741.fb X_U12.x_lm741.fb X_U13.x_lm741.fb X_U14.x_lm741.fb 
+    X_U15.x_lm741.fb X_U16.x_lm741.fb X_U17A.j1 X_U17A.j2 X_U11.x_lm741.q2 
+    X_U12.x_lm741.q2 X_U13.x_lm741.q2 
+
+**** Interrupt ****

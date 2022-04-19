@@ -1,0 +1,937 @@
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulare_test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Mihai\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 0.1m 
+.STEP LIN PARAM Pot 0 1 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT
+V_V1         N00085 0 12V
+X_R1         OUT1 N00085 N00085 POT PARAMS: SET={Pot} VALUE=50k
+R_R2         0 OUT1  15k TC=0,0 
+X_U1A         N01967 N01971 +VCC -VCC N02027 UA772
+V_V2         N01960 0 24V
+R_R3         0 N01967  34.55k TC=0,0 
+R_R4         N01960 N01971  34.55k TC=0,0 
+R_R5         0 N01971  10k TC=0,0 
+R_R6         N01967 N02027  10k TC=0,0 
+X_U1B         N02027 N02279 +VCC -VCC OUT UA772
+R_R7         N02279 0  10k TC=0,0 
+R_R8         OUT N02279  10.2k TC=0,0 
+V_V3         +VCC 0 15V
+V_V4         -VCC 0 -15V
+.PARAM  pot=0.5
+
+**** RESUMING simulare_test.cir ****
+.END
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.dx        X_U1A.dy        X_U1B.dx        X_U1B.dy        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03                    1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.jx        X_U1B.jx        
+               PJF             PJF             
+         VTO   -1              -1            
+        BETA  205.000000E-06  205.000000E-06 
+          IS   25.000000E-12   25.000000E-12 
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =    0     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    2.7692      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.846E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .1   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    3.0000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.000E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .2   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    3.2727      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.182E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .3   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    3.6000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.400E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .4   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    4.0000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.667E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .5   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    4.5000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.000E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .6   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    5.1429      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.429E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .7   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    6.0000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.000E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .8   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    7.2000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.800E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =     .9   
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)    9.0000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.000E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM POT =    1     
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.0320  ( +VCC)   15.0000  ( -VCC)  -15.0000  ( OUT1)   12.0000      
+
+(N00085)   12.0000 (N01960)   24.0000 (N01967)    5.3883 (N01971)    5.3872     
+
+(N02027)    6.9479 (N02279)    6.9464 (X_U1A.6)-311.7E-06                       
+
+(X_U1A.7)    6.9596                   (X_U1A.8)    6.9596                       
+
+(X_U1A.9)    0.0000                   (X_U1B.6)-632.2E-06                       
+
+(X_U1B.7)   14.0840                   (X_U1B.8)   14.0840                       
+
+(X_U1B.9)    0.0000                   (X_U1A.10)    4.8694                      
+
+(X_U1A.11)  -14.6630                  (X_U1A.12)  -14.6640                      
+
+(X_U1A.53)   14.0000                  (X_U1A.54)  -14.0000                      
+
+(X_U1A.90)     .1560                  (X_U1A.91)   25.0000                      
+
+(X_U1A.92)  -25.0000                  (X_U1A.99)    0.0000                      
+
+(X_U1B.10)    6.4269                  (X_U1B.11)  -14.6650                      
+
+(X_U1B.12)  -14.6670                  (X_U1B.53)   14.0000                      
+
+(X_U1B.54)  -14.0000                  (X_U1B.90)     .6946                      
+
+(X_U1B.91)   25.0000                  (X_U1B.92)  -25.0000                      
+
+(X_U1B.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.000E-04
+    V_V2        -5.387E-04
+    V_V3        -6.000E+03
+    V_V4         6.000E+03
+    X_U1A.vb    -3.117E-09
+    X_U1A.vc     7.053E-12
+    X_U1A.ve     2.286E-11
+    X_U1A.vlim   1.560E-04
+    X_U1A.vlp   -2.484E-11
+    X_U1A.vln   -2.516E-11
+    X_U1B.vb    -6.322E-09
+    X_U1B.vc    -3.366E-14
+    X_U1B.ve     2.995E-11
+    X_U1B.vlim   6.946E-04
+    X_U1B.vlp   -2.431E-11
+    X_U1B.vln   -2.570E-11
+
+    TOTAL POWER DISSIPATION   1.80E+05  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/26/21 15:35:27 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM POT =    1     
+
+
+******************************************************************************
+
+
+
+  License check-out time            =         .80
+  Total job time (using Solver 1)   =         .28
+

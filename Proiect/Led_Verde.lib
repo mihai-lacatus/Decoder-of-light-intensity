@@ -1,0 +1,9 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.MODEL VERDE D
++ IS=543.42E-12
++ N=4.8013
++ RS=7.6318
+
+*$

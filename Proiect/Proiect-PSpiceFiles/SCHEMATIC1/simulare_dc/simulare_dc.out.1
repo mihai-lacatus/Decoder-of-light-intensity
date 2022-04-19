@@ -1,0 +1,84 @@
+
+**** 05/21/21 14:59:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_dc"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_dc.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulare_dc.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../led_violet.lib" 
+.LIB "../../../led_verde.lib" 
+.LIB "../../../led_rosu.lib" 
+.LIB "../../../led_galben.lib" 
+.LIB "../../../led_albastru.lib" 
+.LIB "../../../led_alb.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Mihai\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC PARAM R9 LIST 1 1.5k 3.5k 6.5k 11.5k 21.5k 50k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT
+V_V1         N00884 0 12V
+R_R2         0 N33107  15k TC=0,0 
+V_V2         N01960 0 20V
+R_R3         N33107 N01967  22k TC=0,0 
+R_R4         N01960 N01971  22k TC=0,0 
+R_R5         0 N01971  10k TC=0,0 
+R_R6         N01967 N02054  10k TC=0,0 
+R_R7         N02279 0  10k TC=0,0 
+R_R8         N02363 N02279  6.5k TC=0,0 
+V_V3         +VCC 0 12V
+V_V4         -VCC 0 -12V
+R_R9         N33107 N00884  {R} TC=0,0 
+V_V6         N44111 0 5.99V
+V_V7         N18597 0 6.99V
+V_V8         N18770 0 7.99V
+V_V9         N18946 0 8.99V
+V_V10         N19125 0 9.99V
+V_V11         N20229 0 10.99V
+R_R10         N21390 N21545  440 TC=0,0 
+R_R11         N21394 N21549  440 TC=0,0 
+R_R12         N21398 N21553  495 TC=0,0 
+R_R13         N21402 N21557  495 TC=0,0 
+R_R14         N21406 N21561  495 TC=0,0 
+R_R15         N21414 N21565  450 TC=0,0 
+D_D1         N21545 0 ALB 
+D_D2         N21549 0 ALBASTRU 
+D_D3         N21553 0 GALBEN 
+D_D4         N21557 0 ROSU 
+D_D5         N21561 0 VERDE 
+D_D6         N21565 0 VIOLET 
+X_U8B         N01967 N01971 +VCC -VCC N02054 LM324
+X_U9B         N02054 N02279 +VCC -VCC N02363 LM324
+X_U11         N02363 N44111 +VCC 0 N21390 LM741
+X_U12         N02363 N18597 +VCC 0 N21394 LM741
+X_U13         N02363 N18770 +VCC 0 N21398 LM741
+X_U14         N02363 N18946 +VCC 0 N21402 LM741
+X_U15         N02363 N19125 +VCC 0 N21406 LM741
+X_U16         N02363 N20229 +VCC 0 N21414 LM741
+.PARAM  r=50k
+
+**** RESUMING simulare_dc.cir ****
+.END
+
+ERROR(ORPSIM-15167): Undefined parameter: R9.
+

@@ -1,0 +1,8 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.MODEL GALBEN D
++ IS=229.48E-18
++ N=2.0169
++ RS=21.700
+*$

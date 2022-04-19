@@ -1,0 +1,8 @@
+* PSpice Model Editor - Version 17.4.0
+
+*$
+.MODEL ROSU D
++ IS=546.37E-15
++ N=2.6607
++ RS=16.514
+*$

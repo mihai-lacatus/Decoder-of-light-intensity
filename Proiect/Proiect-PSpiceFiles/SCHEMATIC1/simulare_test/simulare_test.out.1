@@ -1,0 +1,57 @@
+
+**** 04/26/21 15:33:02 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_test"  [ f:\facultate\an2\semestrul 2\tehnici cad\proiect\proiect-PSpiceFiles\SCHEMATIC1\simulare_t
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulare_test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Mihai\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 0.1m 
+.STEP LIN PARAM Pot 0 1 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROIECT
+V_V1         N00085 0 12V
+X_R1         N00962 N00085 N00085 POT PARAMS: SET=Pot VALUE=50k
+--------------------------------------------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'Pot' to double value. Token can be a constant or expression
+---------------------------------------------------------------$
+ERROR(ORPSIM-16368): Encountered an invalid double constant or expression in the input file
+R_R2         0 N00962  15k TC=0,0 
+X_U1A         N01967 N01971 +VCC -VCC N02027 UA772
+V_V2         N01960 0 24V
+R_R3         N00962 N01967  34.55k TC=0,0 
+R_R4         N01960 N01971  34.55k TC=0,0 
+R_R5         0 N01971  10k TC=0,0 
+R_R6         N01967 N02027  10k TC=0,0 
+X_U1B         N02027 N02279 +VCC -VCC OUT UA772
+R_R7         N02279 0  10k TC=0,0 
+R_R8         OUT N02279  10.2k TC=0,0 
+V_V3         +VCC 0 15V
+V_V4         -VCC 0 -15V
+.PARAM  pot=0.5
+
+**** RESUMING simulare_test.cir ****
+.END
+
